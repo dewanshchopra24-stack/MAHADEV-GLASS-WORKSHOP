@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahadev Glass Aluminium & Steel Work</title>
+
+<style>
+    .grid video{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  border-radius:18px;
+  border:1px solid #1e293b;
+  box-shadow:0 20px 40px rgba(0,0,0,.6);
+}
+
+:root{
+    --black:#070101;
+    --dark:#0c1019;
+    --steel:#010809;
+    --text:#cbd5f5;
+    --accent:#94a3b8;
+}
+
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+   
+    background:var(--black);
+    color:var(--text);
+}
+
+
+
+
+/* HEADER */
+header{
+  background:rgba(0, 0, 0, 0.95);
+  backdrop-filter:blur(8px);
+  padding:18px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  border-bottom:1px solid var(--steel);
+}
+
+header h1{
+  color:var(--accent);
+  font-size:22px;
+  letter-spacing:1px;
+}
+
+nav a{
+  color:var(--text);
+  margin-left:30px;
+  text-decoration:none;
+  font-weight:500;
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  width:0;
+  height:2px;
+  background:var(--accent);
+  left:0;
+  bottom:-6px;
+  transition:.3s;
+}
+nav a:hover::after{width:100%;}
+
+/* HERO */
+.hero{
+  height:95vh;
+  background:
+    linear-gradient(rgba(10, 13, 23, 0.55), rgba(2,6,23,.65)),
+    url("img.jpeg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+
+
+.hero h2{
+  font-size:52px;
+  color:#faf8f8;
+}
+.hero p{
+  margin-top:15px;
+  font-size:18px;
+  color:#f0f1f4;
+}
+
+/* SECTION */
+section{
+  padding:90px 70px;
+  max-width:1500px;
+  margin:auto;
+}
+
+section h2{
+  text-align:center;
+  font-size:36px;
+  margin-bottom:50px;
+  color:var(--accent);
+}
+
+/* SERVICE BUTTONS */
+.service-buttons{
+  text-align:center;
+}
+.service-buttons button{
+  padding:14px 30px;
+  margin:10px;
+  border:1px solid var(--steel);
+  background:var(--dark);
+  color:#ffffff;
+  border-radius:40px;
+  cursor:pointer;
+  transition:.3s;
+}
+.service-buttons button:hover{
+  background:var(--accent);
+  color:#ffffff;
+  box-shadow:0 0 25px rgba(255, 255, 255, 0.6);
+}
+
+/* GALLERY */
+.work-gallery{display:none;margin-top:70px;}
+.work-gallery.active{display:block;}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+.grid img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  border-radius:18px;
+  border:1px solid var(--steel);
+  box-shadow:0 20px 40px rgba(19, 9, 9, 0.793);
+  transition:.3s;
+}
+.grid img:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 0 40px #4b89df;
+}
+
+/* CONTACT */
+.contacts{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+  margin-top:50px;
+}.contacts{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:45px;
+}
+
+.contact-card{
+  background:linear-gradient(160deg,#94a3b8,rgba(138, 152, 165, 0.533), 37%, 12%);
+  border:1px solid var(--steel);
+  padding:45px 30px;
+  border-radius:28px;
+  text-align:center;
+}
+
+.contact-card img{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid var(--accent);
+  margin-bottom:20px;
+}
+
+.contact-card h3{font-size:22px;color:#fff;}
+
+.contact-card a{
+  display:inline-block;
+  margin:10px 14px;
+  text-decoration:none;
+  color:var(--accent);
+  font-weight:600;
+}
+  
+/* FOOTER */
+footer{
+  background:#170202;
+  border-top:1px solid var(--steel);
+  color:#ffffff;
+  text-align:center;
+  padding:30px;
+  margin-top:80px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  header{padding:15px 25px;}
+  section{padding:70px 25px;}
+  .hero h2{font-size:34px;}
+}
+</style>
+
+<script>
+function showWork(id){
+  document.querySelectorAll('.work-gallery')
+    .forEach(e=>e.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+</head>
+
+<body>
+<header>
+
+<nav>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+
+
+<div class="hero">
+<div>
+<h1>𝕄𝕒𝕙𝕒𝕕𝕖𝕧 𝔾𝕝𝕒𝕤𝕤 𝔸𝕝𝕦𝕞𝕚𝕟𝕚𝕦𝕞 & 𝕊𝕥𝕖𝕖𝕝 𝕎𝕠𝕣𝕜𝕤𝕙𝕠𝕡</h1>
+<p>“Built with Quality. Delivered with Trust.”</p>
+</div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+<h2>Our Services</h2>
+
+<div class="service-buttons">
+<button onclick="showWork('pvc')">PVC Work</button>
+<button onclick="showWork('gate')">Steel Gate</button>
+<button onclick="showWork('railing')">Steel Railing</button>
+<button onclick="showWork('aluminium')">Aluminium Work</button>
+<button onclick="showWork('glass')">Glass Work</button>
+</div>
+
+<!-- PVC -->
+<div id="pvc" class="work-gallery active">
+<h2>PVC Work</h2>
+<div class="grid">
+    
+        <img src="pvc/WhatsApp Image 2025-12-22 at 19.29.33.jpeg"><img src="pvc/WhatsApp Image 2025-12-22 at 19.29.44.jpeg"><img src="pvc/WhatsApp Image 2025-12-22 at 19.29.49.jpeg">
+<img src="pvc/WhatsApp Image 2025-12-22 at 19.29.58.jpeg"><img src="pvc/WhatsApp Image 2025-12-22 at 19.29.59 (1).jpeg"><img src="pvc/WhatsApp Image 2025-12-22 at 19.29.59.jpeg">
+<img src="pvc/WhatsApp Image 2025-12-22 at 19.30.00.jpeg"><img src="pvc/WhatsApp Image 2025-12-22 at 19.30.02.jpeg"><img src="pvc/WhatsApp Image 2025-12-22 at 19.30.03.jpeg">
+<img src="pvc/WhatsApp Image 2025-12-22 at 19.30.04.jpeg">
+   
+
+
+</div>
+</div>
+
+<!-- GATE -->
+<div id="gate" class="work-gallery">
+<h2>Steel Gate</h2>
+<div class="grid">
+<img src="steal gate/gate.jpeg"><img src="steal gate/SS-MG_21.jpeg"><img src="steal gate/steal gatejpeg.jpeg">
+<img src="steal gate/WhatsApp Image 2025-12-22 at 19.26.17.jpeg"><img src="steal gate/WhatsApp Image 2025-12-22 at 19.26.19.jpeg"><img src="steal gate/WhatsApp Image 2025-12-22 at 19.26.21.jpeg">
+<img src="steal gate/WhatsApp Image 2025-12-22 at 19.26.23.jpeg"><img src="steal gate/WhatsApp Image 2025-12-22 at 19.26.29.jpeg"><img src="steal gate/WhatsApp Image 2025-12-22 at 19.26.37.jpeg">
+<img src="steal gate/WhatsApp Image 2025-12-22 at 19.26.38.jpeg">
+</div>
+</div>
+
+<!-- RAILING -->
+<div id="railing" class="work-gallery">
+<h2>Steel Railing</h2>
+<div class="grid">
+<img src="steal railing/WhatsApp Image 2025-12-22 at 19.24.36.jpeg"><img src="steal railing/WhatsApp Image 2025-12-22 at 19.24.38.jpeg"><img src="steal railing/WhatsApp Image 2025-12-22 at 19.24.45 (1).jpeg">
+<img src="steal railing/WhatsApp Image 2025-12-22 at 19.24.45.jpeg"><img src="steal railing/WhatsApp Image 2025-12-22 at 19.24.46.jpeg"><img src="steal railing/railing.jpeg">
+<img src="steal railing/WhatsApp Image 2025-12-22 at 19.24.48 (1).jpeg"><img src="steal railing/WhatsApp Image 2025-12-22 at 19.24.48.jpeg"><img src="steal railing/WhatsApp Image 2025-12-22 at 19.24.51 (1).jpeg">
+<img src="steal railing/WhatsApp Image 2025-12-22 at 19.24.51.jpeg">
+</div>
+</div>
+
+<!-- ALUMINIUM -->
+<div id="aluminium" class="work-gallery">
+<h2>Aluminium Work</h2>
+<div class="grid">
+<img src="aluminium/WhatsApp Image 2025-12-22 at 19.23.00.jpeg"><img src="aluminium/WhatsApp Image 2025-12-22 at 19.23.01.jpeg"><img src="aluminium/WhatsApp Image 2025-12-22 at 19.23.04.jpeg">
+<img src="aluminium/WhatsApp Image 2025-12-22 at 19.23.05 (1).jpeg"><img src="aluminium/WhatsApp Image 2025-12-22 at 19.23.05.jpeg"><img src="aluminium/WhatsApp Image 2025-12-22 at 19.23.07.jpeg">
+<img src="aluminium/WhatsApp Image 2025-12-22 at 19.23.08 (1).jpeg"><img src="aluminium/WhatsApp Image 2025-12-22 at 19.23.08.jpeg"><img src="aluminium/WhatsApp Image 2025-12-22 at 19.23.10.jpeg">
+<img src="aluminium/WhatsApp Image 2025-12-22 at 19.23.12.jpeg">
+</div>
+</div>
+
+<!-- GLASS -->
+
+
+<div id="glass" class="work-gallery">
+<h2>Glass Work</h2>
+<div class="grid">
+<img src="glass/WhatsApp Image 2025-12-22 at 19.07.18.jpeg"><img src="glass/WhatsApp Image 2025-12-22 at 19.07.21.jpeg"><img src="glass/WhatsApp Image 2025-12-22 at 19.07.25.jpeg">
+<img src="glass/WhatsApp Image 2025-12-22 at 19.07.52.jpeg"><img src="glass/WhatsApp Image 2025-12-22 at 19.08.22.jpeg"><img src="glass/WhatsApp Image 2025-12-22 at 19.08.23.jpeg">
+<img src="glass/WhatsApp Image 2025-12-22 at 19.08.25.jpeg"><img src="glass/WhatsApp Image 2025-12-22 at 19.08.27.jpeg"><img src="glass/WhatsApp Image 2025-12-22 at 19.12.48.jpeg">
+<img src="glass/WhatsApp Image 2025-12-22 at 19.12.57.jpeg"><video autoplay muted loop playsinline>
+  <source src="glass/WhatsApp Video 2025-12-22 at 19.08.31.mp4" type="video/mp4">
+</video>
+
+</div>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact Us</h2>
+
+<div class="contacts">
+
+<div class="contact-card">
+<img src="WhatsApp Image 2025-12-22 at 22.48.38.jpeg">
+<h3>Pro. Shankar Lal</h3>
+<a href="tel:+919509199663">📞 9509199663</a>
+</div>
+
+<div class="contact-card">
+<img src="WhatsApp Image 2025-12-22 at 19.32.47.jpeg">
+<h3>Pro. Vikram Khatiwal</h3>
+<a href="tel:+917375873487">📞 7375873487</a>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2025 Mahadev Glass Aluminium & Steel Works 
+<br>
+Satyu Rajpura Road, Taranagar (Churu), Rajasthan – 331304
+</footer>
+
+</body>
+</html>
