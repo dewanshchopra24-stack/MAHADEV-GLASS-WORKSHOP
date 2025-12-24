@@ -420,7 +420,8 @@ for(let i=0;i<BG_COUNT;i++){
     y: Math.random()*canvas.height,
     vx:(Math.random()-0.5)*0.3,
     vy:(Math.random()-0.5)*0.3,
-    r: Math.random()*1.6+0.4
+   r: Math.random()*2.2+0.8
+
   });
 }
 
@@ -451,10 +452,14 @@ function animate(){
     if(p.x<0||p.x>canvas.width) p.vx*=-1;
     if(p.y<0||p.y>canvas.height) p.vy*=-1;
 
-    ctx.fillStyle="rgba(56,189,248,0.6)";
+  ctx.shadowColor = "rgba(0,200,255,1)";
+ctx.shadowBlur = 12;
+ctx.fillStyle = "rgba(0,200,255,0.9)";
+
     ctx.beginPath();
     ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
     ctx.fill();
+   ctx.shadowBlur = 0;
   });
 
   /* blue sparks */
