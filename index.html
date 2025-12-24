@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mahadev Glass Aluminium & Steel Work</title>
 
 <style>
@@ -24,80 +24,16 @@
   100% { opacity: 1; }
 }
 
-
-.slide-loop{
-  white-space: nowrap;
-  animation:
-    slideLoop 7s linear infinite,
-    blinkGlow 1.5s ease-in-out infinite;
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+ 
+  z-index: -1;
+  background: radial-gradient(circle at top, #020617, #000);
 }
-
-/* LEFT → RIGHT CONTINUOUS SLIDE */
-@keyframes slideLoop{
-  0%{
-    transform: translateX(-120%);
-  }
-  100%{
-    transform: translateX(120%);
-  }
-}
-
-/* BLINK / GLOW */
-@keyframes blinkGlow{
-  0%{
-    text-shadow: 0 0 6px rgba(0,200,255,0.4);
-  }
-  50%{
-    text-shadow: 0 0 22px rgba(0,200,255,1);
-  }
-  100%{
-    text-shadow: 0 0 6px rgba(0,200,255,0.4);
-  }
-}
-html, body{
-  margin:0;
-  padding:0;
-  width:100%;
-  min-height:100%;
-  background:#020617;
-  overflow-x:hidden;
-}
-
-#bg-wrap{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  min-height:100%;
-  z-index:0;
-  overflow:hidden;
-    pointer-events:none; 
-}
-
-#sparkCanvas{
-  width:100%;
-  height:100%;
-  display:block;
-    pointer-events:none; 
-}
-
-#site-content{
-  position:relative;
-  z-index:2;
-}
-
-
-body{
-  background: transparent;
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  overflow-x: hidden;
-}
-
-
-
 
 
 :root{
@@ -117,7 +53,11 @@ body{
   font-family:'Segoe UI',sans-serif;
 }
 
+body{
 
+    background:var(--black);
+    color:var(--text);
+}
 
 
 
@@ -164,7 +104,7 @@ nav a:hover::after{width:100%;}
 
 /* HERO */
 .hero{
-  min-height:100vh;
+  height:80vh;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -262,16 +202,16 @@ section h2{
   background:linear-gradient(160deg,#94a3b8,rgba(138, 152, 165, 0.533), 37%, 12%);
   border:1px solid var(--steel);
   padding:45px 30px;
-
+  border-radius:28px;
   text-align:center;
 }
 
 .contact-card img{
   width:150px;
   height:150px;
-  
+ 
   object-fit:cover;
- solid var(--accent);
+  border:3px solid var(--accent);
   margin-bottom:20px;
 }
 
@@ -284,7 +224,7 @@ section h2{
   color:var(--accent);
   font-weight:600;
 }
-  
+
 /* FOOTER */
 footer{
   background:#170202;
@@ -301,7 +241,6 @@ footer{
   section{padding:70px 25px;}
   .hero h2{font-size:34px;}
 }
- 
 </style>
 
 <script>
@@ -314,7 +253,7 @@ function showWork(id){
 </head>
 
 <body>
-  <canvas id="sparkCanvas"></canvas>
+ <div id="particles-js"></div>
 
 <header>
 
@@ -328,9 +267,9 @@ function showWork(id){
 
 <div class="hero">
 <div>
-<h2 class="slide-loop">𝕄𝕒𝕙𝕒𝕕𝕖𝕧 𝔾𝕝𝕒𝕤𝕤 𝔸𝕝𝕦𝕞𝕚𝕟𝕚𝕦𝕞 & 𝕊𝕥𝕖𝕖𝕝 𝕎𝕠𝕣𝕜𝕤𝕙𝕠𝕡</h2>
+<h2 class="blink-text">𝕄𝕒𝕙𝕒𝕕𝕖𝕧 𝔾𝕝𝕒𝕤𝕤 𝔸𝕝𝕦𝕞𝕚𝕟𝕚𝕦𝕞 & 𝕊𝕥𝕖𝕖𝕝 𝕎𝕠𝕣𝕜𝕤𝕙𝕠𝕡</h2>
 <p>“Built with Quality. Delivered with Trust.”</p>
- 
+
 </div>
 </div>
 
@@ -350,12 +289,12 @@ function showWork(id){
 <div id="pvc" class="work-gallery active">
 <h2>PVC Work</h2>
 <div class="grid">
-    
+
         <img src="WhatsApp Image 2025-12-22 at 19.29.33.jpeg"><img src="WhatsApp Image 2025-12-22 at 19.29.44.jpeg"><img src="WhatsApp Image 2025-12-22 at 19.29.49.jpeg">
 <img src="WhatsApp Image 2025-12-22 at 19.29.58.jpeg"><img src="WhatsApp Image 2025-12-22 at 19.29.59 (1).jpeg"><img src="WhatsApp Image 2025-12-22 at 19.29.59.jpeg">
 <img src="WhatsApp Image 2025-12-22 at 19.30.00.jpeg"><img src="WhatsApp Image 2025-12-22 at 19.30.02.jpeg"><img src="WhatsApp Image 2025-12-22 at 19.30.03.jpeg">
 <img src="WhatsApp Image 2025-12-22 at 19.30.04.jpeg">
-   
+
 
 
 </div>
@@ -365,7 +304,7 @@ function showWork(id){
 <div id="gate" class="work-gallery">
 <h2>Steel Gate</h2>
 <div class="grid">
-<img src="gate.jpeg"><img src="SS-MG_21.jpeg"><img src="steal gatejpeg.jpeg">
+<img src="gate.jpeg"><img src="steal gate/SS-MG_21.jpeg"><img src="steal gatejpeg.jpeg">
 <img src="WhatsApp Image 2025-12-22 at 19.26.17.jpeg"><img src="WhatsApp Image 2025-12-22 at 19.26.19.jpeg"><img src="WhatsApp Image 2025-12-22 at 19.26.21.jpeg">
 <img src="WhatsApp Image 2025-12-22 at 19.26.23.jpeg"><img src="WhatsApp Image 2025-12-22 at 19.26.29.jpeg"><img src="WhatsApp Image 2025-12-22 at 19.26.37.jpeg">
 <img src="WhatsApp Image 2025-12-22 at 19.26.38.jpeg">
@@ -438,106 +377,57 @@ function showWork(id){
 <br>
 Satyu Rajpura Road, Taranagar (Churu), Rajasthan – 331304
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 <script>
-const canvas = document.getElementById("sparkCanvas");
-const ctx = canvas.getContext("2d");
-
-/* ========= RESIZE (MOBILE SAFE) ========= */
-function resize(){
-  canvas.width = window.innerWidth;
-  canvas.height = document.documentElement.clientHeight;
-}
-resize();
-
-let lastWidth = window.innerWidth;
-window.addEventListener("resize", () => {
-  if (window.innerWidth !== lastWidth) {
-    lastWidth = window.innerWidth;
-    resize();
-  }
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+     
+      "value": 140,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      
+      "value": ["#00ffff", "#ffffff", "#00bfff"]
+    },
+    "shape": {
+      "type": "circle"
+    },
+    "opacity": {
+   
+      "value": 0.95,
+      "random": true
+    },
+    "size": {
+   
+      "value": 3,
+      "random": true
+    },
+    "move": {
+      "enable": true,
+      
+      "speed": 2.5,
+      "direction": "none",
+      "out_mode": "out"
+    }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      }
+    }
+  
+  },
+  "retina_detect": true
 });
-
-/* ========= BACKGROUND PARTICLES ========= */
-const particles = [];
-const BG_COUNT = 120;
-
-for(let i=0;i<BG_COUNT;i++){
-  particles.push({
-    x: Math.random()*canvas.width,
-    y: Math.random()*canvas.height,
-    vx:(Math.random()-0.5)*0.25,
-    vy:(Math.random()-0.5)*0.25,
-    r: Math.random()*2+1
-  });
-}
-
-/* ========= CLICK / TOUCH SPARKS ========= */
-const sparks = [];
-
-function spark(x,y){
-  for(let i=0;i<14;i++){
-    sparks.push({
-      x,y,
-      vx:(Math.random()-0.5)*6,
-      vy:(Math.random()-0.5)*6,
-      life:30,
-      r: Math.random()*2+1
-    });
-  }
-}
-
-/* ========= ANIMATION LOOP ========= */
-function animate(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-
-  /* background blue particles */
-  for(const p of particles){
-    p.x += p.vx;
-    p.y += p.vy;
-
-    if(p.x<0||p.x>canvas.width) p.vx*=-1;
-    if(p.y<0||p.y>canvas.height) p.vy*=-1;
-
-    ctx.shadowColor = "rgba(0,200,255,1)";
-    ctx.shadowBlur = 12;
-    ctx.fillStyle = "rgba(0,200,255,0.9)";
-    ctx.beginPath();
-    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    ctx.fill();
-    ctx.shadowBlur = 0;
-  }
-
-  /* sparks (REVERSE LOOP – IMPORTANT) */
-  for(let i=sparks.length-1;i>=0;i--){
-    const s = sparks[i];
-    s.x += s.vx;
-    s.y += s.vy;
-    s.life--;
-
-    ctx.fillStyle = `rgba(56,189,248,${s.life/30})`;
-    ctx.beginPath();
-    ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
-    ctx.fill();
-
-    if(s.life<=0) sparks.splice(i,1);
-  }
-
-  requestAnimationFrame(animate);
-}
-animate();
-
-/* ========= EVENTS ========= */
-window.addEventListener("click",e=>{
-  spark(e.clientX,e.clientY);
-});
-
-window.addEventListener("touchstart",e=>{
-  e.preventDefault();          // 🔥 STOP SCROLL JUMP
-  const t = e.touches[0];
-  spark(t.clientX,t.clientY);
-},{ passive:false });
 </script>
+
 
 </body>
 </html>
