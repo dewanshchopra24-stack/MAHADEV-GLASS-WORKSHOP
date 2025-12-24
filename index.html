@@ -15,6 +15,16 @@
   border:1px solid #1e293b;
   box-shadow:0 20px 40px rgba(0,0,0,.6);
 }
+ .blink-text {
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
 #particles-js {
   position: fixed;
   width: 100%;
@@ -256,7 +266,7 @@ function showWork(id){
 
 <div class="hero">
 <div>
-<h2 class="sparkle-text">𝕄𝕒𝕙𝕒𝕕𝕖𝕧 𝔾𝕝𝕒𝕤𝕤 𝔸𝕝𝕦𝕞𝕚𝕟𝕚𝕦𝕞 & 𝕊𝕥𝕖𝕖𝕝 𝕎𝕠𝕣𝕜𝕤𝕙𝕠𝕡</h2>
+<h2 class="blink-text">𝕄𝕒𝕙𝕒𝕕𝕖𝕧 𝔾𝕝𝕒𝕤𝕤 𝔸𝕝𝕦𝕞𝕚𝕟𝕚𝕦𝕞 & 𝕊𝕥𝕖𝕖𝕝 𝕎𝕠𝕣𝕜𝕤𝕙𝕠𝕡</h2>
 <p>“Built with Quality. Delivered with Trust.”</p>
  
 </div>
