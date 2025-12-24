@@ -26,38 +26,35 @@
 }
 
 
-.slide-blink{
-  opacity: 0;
+.slide-loop{
+  white-space: nowrap;
   animation:
-    slideIn 1.2s ease-out forwards,
-    blinkGlow 2s ease-in-out infinite 1.2s;
+    slideLoop 8s linear infinite,
+    blinkGlow 2s ease-in-out infinite;
 }
 
-/* SLIDE animation */
-@keyframes slideIn{
-  from{
-    transform: translateX(-120px);
-    opacity: 0;
-  }
-  to{
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* BLINK / GLOW animation */
-@keyframes blinkGlow{
+/* LEFT → RIGHT CONTINUOUS SLIDE */
+@keyframes slideLoop{
   0%{
-    text-shadow: 0 0 5px rgba(0,200,255,0.4);
-  }
-  50%{
-    text-shadow: 0 0 20px rgba(0,200,255,1);
+    transform: translateX(-120%);
   }
   100%{
-    text-shadow: 0 0 5px rgba(0,200,255,0.4);
+    transform: translateX(120%);
   }
 }
 
+/* BLINK / GLOW */
+@keyframes blinkGlow{
+  0%{
+    text-shadow: 0 0 6px rgba(0,200,255,0.4);
+  }
+  50%{
+    text-shadow: 0 0 22px rgba(0,200,255,1);
+  }
+  100%{
+    text-shadow: 0 0 6px rgba(0,200,255,0.4);
+  }
+}
 
 
 #sparkCanvas{
@@ -313,7 +310,7 @@ function showWork(id){
 
 <div class="hero">
 <div>
-<h2 class="slide-blink">𝕄𝕒𝕙𝕒𝕕𝕖𝕧 𝔾𝕝𝕒𝕤𝕤 𝔸𝕝𝕦𝕞𝕚𝕟𝕚𝕦𝕞 & 𝕊𝕥𝕖𝕖𝕝 𝕎𝕠𝕣𝕜𝕤𝕙𝕠𝕡</h2>
+<h2 class="slide-loop">𝕄𝕒𝕙𝕒𝕕𝕖𝕧 𝔾𝕝𝕒𝕤𝕤 𝔸𝕝𝕦𝕞𝕚𝕟𝕚𝕦𝕞 & 𝕊𝕥𝕖𝕖𝕝 𝕎𝕠𝕣𝕜𝕤𝕙𝕠𝕡</h2>
 <p>“Built with Quality. Delivered with Trust.”</p>
  
 </div>
