@@ -24,13 +24,26 @@
   50%  { opacity: 0.3; }
   100% { opacity: 1; }
 }
+body{
+  position: relative;
+  z-index: 1;
+  background: transparent;
+ 
+  color: #e5e7eb;
+}
 
 #sparkCanvas{
   position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: radial-gradient(circle at center, #020617, #000);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+ background: radial-gradient(circle at center, #020617, #000);
+
 }
+
 
 
 :root{
@@ -50,10 +63,7 @@
   font-family:'Segoe UI',sans-serif;
 }
 
-body {
-  background: #020617;
-  color: #e5e7eb;
-}
+
 
 
 
