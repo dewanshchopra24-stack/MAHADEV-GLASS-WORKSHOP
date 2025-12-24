@@ -26,6 +26,39 @@
 }
 
 
+.slide-blink{
+  opacity: 0;
+  animation:
+    slideIn 1.2s ease-out forwards,
+    blinkGlow 2s ease-in-out infinite 1.2s;
+}
+
+/* SLIDE animation */
+@keyframes slideIn{
+  from{
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* BLINK / GLOW animation */
+@keyframes blinkGlow{
+  0%{
+    text-shadow: 0 0 5px rgba(0,200,255,0.4);
+  }
+  50%{
+    text-shadow: 0 0 20px rgba(0,200,255,1);
+  }
+  100%{
+    text-shadow: 0 0 5px rgba(0,200,255,0.4);
+  }
+}
+
+
 
 #sparkCanvas{
   position: fixed;
@@ -208,7 +241,7 @@ section h2{
   background:linear-gradient(160deg,#94a3b8,rgba(138, 152, 165, 0.533), 37%, 12%);
   border:1px solid var(--steel);
   padding:45px 30px;
-  border-radius:28px;
+
   text-align:center;
 }
 
@@ -217,7 +250,7 @@ section h2{
   height:150px;
   border-radius:50%;
   object-fit:cover;
-  border:3px solid var(--accent);
+ solid var(--accent);
   margin-bottom:20px;
 }
 
@@ -280,7 +313,7 @@ function showWork(id){
 
 <div class="hero">
 <div>
-<h2 class="blink-text">𝕄𝕒𝕙𝕒𝕕𝕖𝕧 𝔾𝕝𝕒𝕤𝕤 𝔸𝕝𝕦𝕞𝕚𝕟𝕚𝕦𝕞 & 𝕊𝕥𝕖𝕖𝕝 𝕎𝕠𝕣𝕜𝕤𝕙𝕠𝕡</h2>
+<h2 class="slide-blink">𝕄𝕒𝕙𝕒𝕕𝕖𝕧 𝔾𝕝𝕒𝕤𝕤 𝔸𝕝𝕦𝕞𝕚𝕟𝕚𝕦𝕞 & 𝕊𝕥𝕖𝕖𝕝 𝕎𝕠𝕣𝕜𝕤𝕙𝕠𝕡</h2>
 <p>“Built with Quality. Delivered with Trust.”</p>
  
 </div>
