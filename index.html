@@ -25,14 +25,11 @@
   100% { opacity: 1; }
 }
 
-#particles-js {
+#sparkCanvas{
   position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: -1;
-  background: radial-gradient(circle at top, #020617, #000);
+  background: radial-gradient(circle at center, #020617, #000);
 }
 
 
@@ -53,10 +50,9 @@
   font-family:'Segoe UI',sans-serif;
 }
 
-body{
-   
-    background:var(--black);
-    color:var(--text);
+body {
+  background: #020617;
+  color: #e5e7eb;
 }
 
 
@@ -241,6 +237,13 @@ footer{
   section{padding:70px 25px;}
   .hero h2{font-size:34px;}
 }
+ #sparkCanvas{
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at center, #020617, #000);
+}
+
 </style>
 
 <script>
@@ -253,7 +256,7 @@ function showWork(id){
 </head>
 
 <body>
- <div id="particles-js"></div>
+ 
 
 <header>
 
@@ -377,51 +380,86 @@ function showWork(id){
 <br>
 Satyu Rajpura Road, Taranagar (Churu), Rajasthan – 331304
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+
+
+<audio id="robotSound" preload="auto">
+  <source src="robot-click.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+ <canvas id="sparkCanvas"></canvas>
+
+<audio id="robotSound" preload="auto">
+  <source src="robot-click.mp3" type="audio/mpeg">
+</audio>
 
 <script>
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 140,
-      "density": {
-        "enable": true,
-        "value_area": 800
-      }
-    },
-    "color": {
-      "value": ["#00ffff", "#ffffff", "#00bfff"]
-    },
-    "shape": {
-      "type": "circle"
-    },
-    "opacity": {
-      "value": 0.95,
-      "random": true
-    },
-    "size": {
-      "value": 3,
-      "random": true
-    },
-    "move": {
-      "enable": true,
-      "speed": 2.5,
-      "direction": "none",
-      "out_mode": "out"
-    }
-  },
-  "interactivity": {
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "repulse"
-      }
-    }
-  },
-  "retina_detect": true
-});
-</script>
+/* ===== SPARK + ROBOT SOUND ===== */
 
+const canvas = document.getElementById("sparkCanvas");
+const ctx = canvas.getContext("2d");
+const sound = document.getElementById("robotSound");
+
+function resize(){
+  canvas.width = innerWidth;
+  canvas.height = innerHeight;
+}
+resize();
+addEventListener("resize", resize);
+
+let sparks = [];
+
+function createSpark(x,y){
+  for(let i=0;i<6;i++){
+    sparks.push({
+      x,y,
+      vx:(Math.random()-0.5)*6,
+      vy:(Math.random()-0.5)*6,
+      life:30
+    });
+  }
+}
+
+function animate(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  sparks.forEach((s,i)=>{
+    s.x+=s.vx;
+    s.y+=s.vy;
+    s.life--;
+
+    ctx.fillStyle = "rgba(255,160,40,"+(s.life/30)+")";
+    ctx.fillRect(s.x,s.y,2,2);
+
+    if(s.life<=0) sparks.splice(i,1);
+  });
+
+  requestAnimationFrame(animate);
+}
+animate();
+
+/* desktop click */
+addEventListener("click",(e)=>{
+  createSpark(e.clientX,e.clientY);
+  sound.currentTime = 0;
+  sound.play();
+});
+
+/* mobile touch */
+addEventListener("touchstart",(e)=>{
+  const t = e.touches[0];
+  createSpark(t.clientX, t.clientY);
+  sound.currentTime = 0;
+  sound.play();
+});
+
+/* browser sound unlock */
+document.body.addEventListener("click", ()=>{
+  sound.play().then(()=>sound.pause()).catch(()=>{});
+},{ once:true });
+
+</script>
 
 </body>
 </html>
