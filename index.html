@@ -31,9 +31,10 @@
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1; /* background me rahe */
-  background: #000; /* black background */
+  z-index: -1;
+  background: radial-gradient(circle at top, #020617, #000);
 }
+
 
 :root{
     --black:#070101;
@@ -382,27 +383,45 @@ Satyu Rajpura Road, Taranagar (Churu), Rajasthan – 331304
 particlesJS("particles-js", {
   "particles": {
     "number": {
-      "value": 80
+      "value": 140,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
     },
     "color": {
-      "value": "#00ffff"
+      "value": ["#00ffff", "#ffffff", "#00bfff"]
     },
     "shape": {
       "type": "circle"
     },
     "opacity": {
-      "value": 0.6
+      "value": 0.95,
+      "random": true
     },
     "size": {
-      "value": 2
+      "value": 3,
+      "random": true
     },
     "move": {
       "enable": true,
-      "speed": 2
+      "speed": 2.5,
+      "direction": "none",
+      "out_mode": "out"
     }
-  }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      }
+    }
+  },
+  "retina_detect": true
 });
 </script>
+
 
 </body>
 </html>
