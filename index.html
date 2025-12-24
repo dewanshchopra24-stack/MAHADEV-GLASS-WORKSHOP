@@ -15,6 +15,15 @@
   border:1px solid #1e293b;
   box-shadow:0 20px 40px rgba(0,0,0,.6);
 }
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* background me rahe */
+  background: #000; /* black background */
+}
 
 :root{
     --black:#070101;
@@ -233,6 +242,8 @@ function showWork(id){
 </head>
 
 <body>
+ <div id="particles-js"></div>
+
 <header>
 
 <nav>
@@ -245,8 +256,9 @@ function showWork(id){
 
 <div class="hero">
 <div>
-<h2>𝕄𝕒𝕙𝕒𝕕𝕖𝕧 𝔾𝕝𝕒𝕤𝕤 𝔸𝕝𝕦𝕞𝕚𝕟𝕚𝕦𝕞 & 𝕊𝕥𝕖𝕖𝕝 𝕎𝕠𝕣𝕜𝕤𝕙𝕠𝕡</h2>
+<h2 class="sparkle-text">𝕄𝕒𝕙𝕒𝕕𝕖𝕧 𝔾𝕝𝕒𝕤𝕤 𝔸𝕝𝕦𝕞𝕚𝕟𝕚𝕦𝕞 & 𝕊𝕥𝕖𝕖𝕝 𝕎𝕠𝕣𝕜𝕤𝕙𝕠𝕡</h2>
 <p>“Built with Quality. Delivered with Trust.”</p>
+ 
 </div>
 </div>
 
@@ -354,6 +366,33 @@ function showWork(id){
 <br>
 Satyu Rajpura Road, Taranagar (Churu), Rajasthan – 331304
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 80
+    },
+    "color": {
+      "value": "#00ffff"
+    },
+    "shape": {
+      "type": "circle"
+    },
+    "opacity": {
+      "value": 0.6
+    },
+    "size": {
+      "value": 2
+    },
+    "move": {
+      "enable": true,
+      "speed": 2
+    }
+  }
+});
+</script>
 
 </body>
 </html>
