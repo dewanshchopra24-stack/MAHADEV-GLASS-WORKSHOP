@@ -29,8 +29,8 @@
 .slide-loop{
   white-space: nowrap;
   animation:
-    slideLoop 8s linear infinite,
-    blinkGlow 2s ease-in-out infinite;
+    slideLoop 7s linear infinite,
+    blinkGlow 1.5s ease-in-out infinite;
 }
 
 /* LEFT → RIGHT CONTINUOUS SLIDE */
@@ -62,7 +62,7 @@
   inset: 0;
   width: 100vw;
   min-height: 100vh;
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
   background: radial-gradient(circle at center, #020617, #000);
 }
@@ -283,13 +283,7 @@ footer{
   section{padding:70px 25px;}
   .hero h2{font-size:34px;}
 }
- #sparkCanvas{
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: radial-gradient(circle at center, #020617, #000);
-}
-
+ 
 </style>
 
 <script>
