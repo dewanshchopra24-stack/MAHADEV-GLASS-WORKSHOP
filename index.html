@@ -4,59 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mahadev Glass Aluminium & Steel Works | Taranagar Churu</title>
+
 <meta name="description" content="Mahadev Glass Aluminium & Steel Works - PVC work, Aluminium work, Steel gate, Steel railing & Glass work in Taranagar, Churu Rajasthan.">
 
 
 
-
 <style>
-    .services-section{
-  padding:40px 20px 80px;
-  margin-top:-20px;
-}
-
-.services-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(230px,1fr));
-  gap:25px;
-  max-width:1100px;
-  margin:auto;
-}
-
-.service-card{
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.15);
-  border-radius:18px;
-  overflow:hidden;
-  backdrop-filter:blur(10px);
-  transition:all 0.3s ease;
-}
-
-.service-card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 20px 40px rgba(0,0,0,0.6);
-  border-color:#38bdf8;
-}
-
-.service-card img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-}
-
-.service-card h3{
-  color:#38bdf8;
-  margin:15px 15px 8px;
-  font-size:20px;
-}
-
-.service-card p{
-  color:#cbd5e1;
-  font-size:14px;
-  line-height:1.6;
-  margin:0 15px 18px;
-}
-
     .grid video{
   width:100%;
   height:240px;
@@ -292,6 +245,39 @@ footer{
   section{padding:70px 25px;}
   .hero h2{font-size:34px;}
 }
+.mini-image-row{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  margin-top:16px;
+  flex-wrap:wrap;
+}
+
+.mini-card{
+  width:120px;
+  height:80px;
+  border-radius:10px;
+  overflow:hidden;
+  border:1px solid #334155;
+  box-shadow:0 6px 14px rgba(0,0,0,.4);
+}
+
+.mini-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+@media(max-width:600px){
+  .mini-card{
+    width:42%;
+    height:90px;
+  }
+}
+
+
+
+
 </style>
 
 <script>
@@ -320,37 +306,16 @@ function showWork(id){
 <div>
 <h1 class="blink-text">𝕄𝕒𝕙𝕒𝕕𝕖𝕧 𝔾𝕝𝕒𝕤𝕤 𝔸𝕝𝕦𝕞𝕚𝕟𝕚𝕦𝕞 & 𝕊𝕥𝕖𝕖𝕝 𝕎𝕠𝕣𝕜𝕤𝕙𝕠𝕡</h1>
 <p>“Built with Quality. Delivered with Trust.”</p>
-<section class="services-section">
+<div class="mini-image-row">
+  <a href="WhatsApp Image 2025-12-22 at 19.12.48.jpeg" target="_blank" class="mini-card">
+    <img src="WhatsApp Image 2025-12-22 at 19.12.48.jpeg">
+  </a>
 
-  <div class="services-grid">
+  <a href="WhatsApp Image 2025-12-22 at 19.24.36.jpeg" target="_blank" class="mini-card">
+    <img src="WhatsApp Image 2025-12-22 at 19.24.36.jpeg">
+  </a>
+</div>
 
-    <div class="service-card">
-      <img src="WhatsApp Image 2025-12-22 at 19.12.48.jpeg" alt="Glass Railing Work">
-      <h3>Glass work</h3>
-      
-    </div>
-
-    <div class="service-card">
-      <img src="WhatsApp Image 2025-12-22 at 19.23.01.jpeg" alt="Aluminium Window Work">
-      <h3>Aluminium Windows</h3>
-  
-    </div>
-
-    <div class="service-card">
-      <img src="WhatsApp Image 2025-12-22 at 19.24.36.jpeg" alt="steal railing Work">
-      <h3>Steal railing </h3>
-     
-    </div>
-
-    <div class="service-card">
-      <img src="SS-MG_21.jpeg" alt="Steel Fabrication Work">
-      <h3>Steel gate</h3>
-      <p>Steel gate, shed aur custom fabrication ka strong kaam.</p>
-    </div>
- 
-  </div>
-
-</section>
 
 </div>
 </div>
@@ -508,6 +473,15 @@ particlesJS("particles-js", {
   },
   "retina_detect": true
 });
+
+function openImage(src){
+  document.getElementById("imageModal").style.display="flex";
+  document.getElementById("modalImg").src = src;
+}
+
+function closeImage(){
+  document.getElementById("imageModal").style.display="none";
+}
 </script>
 
 
